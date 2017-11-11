@@ -1,0 +1,273 @@
+*ANIMATIONS*/
+
+@keyframes ocean {
+  0% {
+    background: #051e59;
+  }
+  25% {
+    background: #071138;
+  }
+  50% {
+    background: #051e59;
+  }
+  75% {
+    background: #071138;
+  }
+  100% {
+    background: #051e59;
+  }
+}
+
+@keyframes bodyfin {
+  0% {
+    transform: rotate(-40deg);
+  }
+  25% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(-50deg);
+  }
+  75% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(-40deg);
+  }
+}
+
+@keyframes tail {
+  0% {
+    transform: rotate(-90deg);
+  }
+  25% {
+    transform: rotate(-95deg);
+  }
+  50% {
+    transform: rotate(-90deg);
+  }
+  75% {
+    transform: rotate(-95deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
+
+/*STYLES*/
+body {
+	background: #2a095e
+}
+
+.ocean {
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation-name: ocean;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  z-index: 1;
+}
+
+.nemo {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  z-index: 1;
+}
+
+.body {
+  width: 200px;
+  height: 100px;
+  background: #E5712A;
+  border-radius: 100px / 50px;
+  position: relative;
+  z-index: 3;
+}
+
+.stripeone {
+  position: absolute;
+  width: 40px;
+  height: 80px;
+  background: white;
+  border-radius: 50%;
+  left: 30px;
+  top: 10px;
+  z-index: 4;
+  border-right: solid 1px #000;
+}
+
+.stripeone:before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 70px;
+  background: #E5712A;
+  border-radius: 50%;
+  left: -12px;
+  top: 5px;
+  z-index: 4;
+  border-right: solid 1px #000;
+}
+
+.stripetwo {
+  position: absolute;
+  width: 40px;
+  height: 90px;
+  background: white;
+  border-radius: 50%;
+  left: 110px;
+  top: 4px;
+  z-index: 4;
+  border-right: solid 1px #000;
+}
+
+.stripetwo:before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 90px;
+  background: #E5712A;
+  border-radius: 50%;
+  left: -15px;
+  top: 0px;
+  z-index: 4;
+  border-right: solid 1px #000;
+}
+
+.topfin {
+  background: #BB4923;
+  width: 40px;
+  height: 30px;
+  position: absolute;
+  z-index: 0;
+  left: 80px;
+  top: -20px;
+  transform: rotate(5deg);
+  border-top: solid 4px #000;
+  border-radius: 15px 10px 0 0;
+}
+
+.topfin:before {
+  content: '';
+  width: 10px;
+  height: 100%;
+  background: transparent;
+  border-right: solid 2px #E5712A;
+  position: absolute;
+  left: 10px;
+  border-radius: 0px 50px 50px 0px;
+}
+
+.topfin:after {
+  content: '';
+  width: 10px;
+  height: 100%;
+  background: transparent;
+  border-left: solid 2px #E5712A;
+  position: absolute;
+  left: 20px;
+  border-radius: 30px 0px 30px 0px;
+}
+
+.eye {
+  width: 30px;
+  height: 30px;
+  background: #FFF;
+  position: absolute;
+  border-radius: 30px;
+  top: 30px;
+  left: 20px;
+  z-index: 4;
+}
+
+.eye:before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  background: #000;
+  z-index: 4;
+  border-radius: 10px;
+}
+
+.bodyfin {
+  width: 0;
+  height: 0;
+  border-right: 15px solid transparent;
+  border-bottom: 30px solid #BB4923;
+  border-left: 15px solid transparent;
+  position: absolute;
+  z-index: 4;
+  transform: rotate(-40deg);
+  border-radius: 10px;
+  top: 40px;
+  left: 80px;
+  animation-name: bodyfin;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+}
+
+.bodyfin:after {
+  content: '';
+  width: 28px;
+  background: transparent;
+  position: absolute;
+  left: -14px;
+  z-index: 4;
+  height: 28px;
+  border-bottom: solid 2px #000;
+  border-radius: 10px;
+}
+
+.tail {
+  width: 0;
+  height: 0;
+  border-right: 30px solid transparent;
+  border-bottom: 50px solid #BB4923;
+  border-left: 30px solid transparent;
+  position: absolute;
+  z-index: 0;
+  transform: rotate(-90deg);
+  border-radius: 30px;
+  top: 25px;
+  right: -32px;
+  animation-name: tail;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+}
+
+.tail:before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  border-right: solid 10px #FFF;
+  position: absolute;
+  left: -20px;
+  top: -3px;
+  z-index: 4;
+  transform: rotate(90deg);
+  border-radius: 50px;
+}
+
+.tail:after {
+  content: '';
+  width: 60px;
+  height: 50px;
+  border-right: solid 10px #000;
+  position: absolute;
+  left: -35px;
+  top: 0px;
+  z-index: 4;
+  transform: rotate(90deg);
+  border-radius: 50px;
+}
